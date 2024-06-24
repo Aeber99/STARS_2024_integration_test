@@ -9,7 +9,7 @@ module tb_top ();
     
     logic [31:0] instruction; //instruction to CPU
     logic [31:0] alu_result;  //numerical/logical output of ALU
-        zero_flag, //ALU flag whenever output == 0
+    logic zero_flag, //ALU flag whenever output == 0
         eq_flag, //ALU branch flag used for beq, bge, and bgeu
         less_flag, //ALU flag used for blt, bltu
         err_flag; //ALU flag invalid operation, from ALU
@@ -24,7 +24,7 @@ module tb_top ();
 
         #10;
 
-        $display("ALU Result: %d\nctrl err: %b\nzero: %b\neq: %b\nless:%b\nerror:%b", alu_result, ctrl_err, zero_flag, eq_flag, less_flag, err_flag);
+        $display("ALU Result: %d\nzero: %b\neq: %b\nless:%b\nerror:%b", alu_result,  zero_flag, eq_flag, less_flag, err_flag);
 
     end
     

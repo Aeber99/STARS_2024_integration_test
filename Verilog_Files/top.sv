@@ -7,7 +7,7 @@ module top (
     input logic [31:0] instruction, //instruction to CPU
     output logic [31:0] alu_result,  //numerical/logical output of ALU
     // output logic ctrl_err, //error flag indicating invalid instruction (not w/in RISC-V 32I), from alu control
-    zero_flag, //ALU flag whenever output == 0
+    output logic zero_flag, //ALU flag whenever output == 0
     eq_flag, //ALU branch flag used for beq, bge, and bgeu
     less_flag, //ALU flag used for blt, bltu
     err_flag //ALU flag invalid operation, from ALU
